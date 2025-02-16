@@ -3,7 +3,7 @@ import {
   FaInstagramSquare,
   FaYoutubeSquare,
 } from "react-icons/fa";
-import styles from "./navbar.module.css"
+import styles from "./navbar.module.css";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import Link from "next/link";
 import AuthLinks from "../authLinks/AuthLinks";
@@ -18,15 +18,22 @@ const Navbar = () => {
         <FaYoutubeSquare size={24} color="#FF0000" />
       </div>
       <div className={`${styles.logo}`}>TimesTune</div>
+      <div className={`${styles.mobilelogo}`}>TT</div>
       <div className={`${styles.links}`}>
-        <ThemeToggle/>
-        <Link href="/">Homepage</Link>
-        <Link href="/">Contact</Link>
-        <Link href="/">About</Link>
-        <AuthLinks/>
+        <ThemeToggle />
+        <Link href="/" className={`${styles.link}`}>
+          Homepage
+        </Link>
+        <Link href="/" className={`${styles.link}`}>
+          Contact
+        </Link>
+        <Link href="/" className={`${styles.link}`}>
+          About
+        </Link>
+        <AuthLinks />
       </div>
     </div>
   );
-}
+};
 
-export default Navbar
+export default Navbar;
